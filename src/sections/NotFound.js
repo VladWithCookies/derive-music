@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import Error from '../components/Error'
 
 const NotFound = () => (
-  <section className="flex justify-center items-center h-full">
+  <section className="container flex justify-center items-center">
     <Error
       title="Page not found"
       description="Sorry we couldn’t find what you were looking for..."
@@ -17,6 +17,6 @@ const NotFound = () => (
       </Link>
     </Error>
   </section>
-);
+)
 
-export default NotFound;
+export default NotFound

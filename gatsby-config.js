@@ -3,23 +3,23 @@ module.exports = {
     title: 'Derive music',
   },
   plugins: [
-    {
-      resolve: 'gatsby-source-contentful',
-      options: {
-        accessToken: 'XrzPl1V302CYq0ePe4a0CeFGOUvw8zH_45Aj_fLrPHY',
-        spaceId: 'rwra23x6dlqz',
-      },
-    },
+    // {
+    //   resolve: 'gatsby-source-contentful',
+    //   options: {
+    //     accessToken: 'accessToken',
+    //     spaceId: 'spaceId',
+    //   },
+    // },
     'gatsby-plugin-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-offline',
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        icon: 'src/images/icon.png',
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-manifest',
+    //   options: {
+    //     icon: 'src/images/icon.png',
+    //   },
+    // },
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-source-filesystem',
@@ -30,5 +30,6 @@ module.exports = {
       __key: 'images',
     },
     'gatsby-plugin-postcss',
+    'gatsby-plugin-fontawesome-css',
   ],
-};
+}
