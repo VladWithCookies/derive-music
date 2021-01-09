@@ -1,14 +1,11 @@
-import * as React from "react"
+import * as React from 'react'
+
+import Main from '../layouts/Main'
 
 const IndexPage = () => (
-  <main>
-    <title>
-      Home Page
-    </title>
-    <p className="text-5xl">
-      Hello world
-    </p>
-  </main>
+  <Main title="Hello world">
+
+  </Main>
 )
 
 export default IndexPage

@@ -1,22 +1,12 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import * as React from 'react'
+
+import Main from '../layouts/Main'
+import NotFound from '../sections/NotFound'
 
 const NotFoundPage = () => (
-  <main>
-    <title>
-      Not found
-    </title>
-    <h1>
-      Page not found
-    </h1>
-    <p>
-      Sorry we couldn’t find what you were looking for.
-      <br />
-      <Link to="/">
-        Take me home
-      </Link>.
-    </p>
-  </main>
+  <Main title="Not found">
+    <NotFound />
+  </Main>
 )
 
 export default NotFoundPage
