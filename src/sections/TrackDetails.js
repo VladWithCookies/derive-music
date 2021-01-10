@@ -4,14 +4,22 @@ import Cover from '../components/Cover'
 import Track from '../components/Track'
 import Description from '../components/Description'
 
-const TrackDetails = () => (
+const TrackDetails = ({ title, file, cover, description }) => (
   <section className="container mx-auto flex flex-grow flex-wrap px-4 py-8">
-    <Cover className="mr-4"/>
+    <Cover
+      src={cover.resolutions.src}
+      className="mr-4"
+    />
     <div>
-      <Track title="Title" />
-      <Description>
-        Description
-      </Description>
+      <Track
+        title={title}
+        src={file.file.url}
+      />
+      {description && (
+        <Description>
+          {description}
+        </Description>
+      )}
     </div>
   </section>
 )

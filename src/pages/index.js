@@ -24,11 +24,12 @@ const IndexPage = ({ data: { allContentfulTrack, allContentfulPlaylist } }) => (
 )
 
 export const query = graphql`
-  query {
-    allContentfulTrack {
+  query home {
+    allContentfulTrack(filter: { isFresh: { eq: true } }) {
       nodes {
         contentfulId: contentful_id
         title
+        description
         cover {
           resolutions {
             src
@@ -40,6 +41,7 @@ export const query = graphql`
       nodes {
         contentfulId: contentful_id
         title
+        description
         cover {
           resolutions {
             src

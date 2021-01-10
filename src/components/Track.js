@@ -1,7 +1,7 @@
 import * as React from 'react'
 import clsx from 'clsx'
 
-const Track = ({ title, className, as }) => {
+const Track = ({ title, src, className, as }) => {
   const Component = as || 'div'
 
   return (
@@ -10,9 +10,9 @@ const Track = ({ title, className, as }) => {
         {title}
       </p>
       <audio
-        src=""
+        src={src}
         controls="controls"
-        className="w-full border border-solid border-black"
+        className="w-full border border-solid border-black outline-none"
       />
     </Component>
   )
