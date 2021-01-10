@@ -1,9 +1,10 @@
 import * as React from 'react'
+import { map } from 'lodash'
 
 import Title from '../components/Title'
 import Card from '../components/Card'
 
-const CardList = ({ title, entity }) => (
+const CardList = ({ title, entity, items }) => (
   <section className="container mx-auto py-8">
     <Title
       as="h2"
@@ -12,24 +13,14 @@ const CardList = ({ title, entity }) => (
       {title}
     </Title>
     <ul className="flex flex-wrap">
-      <Card
-        as="li"
-        title="Title"
-        entity={entity}
-        description="Description"
-      />
-      <Card
-        as="li"
-        title="Title"
-        entity={entity}
-        description="Description"
-      />
-      <Card
-        as="li"
-        title="Title"
-        entity={entity}
-        description="Description"
-      />
+      {map(items, item => (
+        <Card
+          key={item.contentfulId}
+          as="li"
+          entity={entity}
+          {...item}
+        />
+      ))}
     </ul>
   </section>
 )

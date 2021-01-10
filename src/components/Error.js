@@ -5,9 +5,11 @@ const Error = ({ title, description, children }) => (
     <h1 className="text-2xl leading-loose	">
       {title}
     </h1>
-    <p className="text-md leading-loose	">
-      {description}
-    </p>
+    {description && (
+      <p className="text-md leading-loose	">
+        {description}
+      </p>
+    )}
     {children}
   </div>
 )

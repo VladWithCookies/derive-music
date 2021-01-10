@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 
-const Card = ({ id, title, entity, description, as }) => {
+const Card = ({ id, title, entity, cover, description, as }) => {
   const Component = as || 'div'
 
   return (
@@ -9,15 +9,17 @@ const Card = ({ id, title, entity, description, as }) => {
       <Link to={`/${entity}/${id}`}>
         <img
           className="object-cover w-80 h-80"
-          src="https://picsum.photos/800/600"
+          src={cover.resolutions.src}
           alt=""
         />
         <p className="text-lg mt-2">
           {title}
         </p>
-        <p className="text-sm text-gray-500	">
-          {description}
-        </p>
+        {description && (
+          <p className="text-sm text-gray-500	">
+            {description}
+          </p>
+        )}
       </Link>
     </Component>
   )

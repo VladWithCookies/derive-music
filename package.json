@@ -33,6 +33,7 @@
     "gatsby-source-contentful": "^4.4.0",
     "gatsby-source-filesystem": "^2.9.0",
     "gatsby-transformer-sharp": "^2.10.0",
+    "lodash": "^4.17.20",
     "postcss": "^8.2.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

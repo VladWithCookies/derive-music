@@ -4,7 +4,7 @@ import Main from '../layouts/Main'
 import CardList from '../sections/CardList'
 import Profile from '../sections/Profile'
 
-const IndexPage = () => (
+const IndexPage = ({ data: { allContentfulTrack, allContentfulPlaylist } }) => (
   <Main>
     <h1 hidden>
       Derive music
@@ -12,13 +12,42 @@ const IndexPage = () => (
     <CardList
       title="Fresh works"
       entity="tracks"
+      items={allContentfulTrack.nodes}
     />
     <CardList
       title="Playlists"
       entity="playlists"
+      items={allContentfulPlaylist.nodes}
     />
     <Profile />
   </Main>
 )
+
+export const query = graphql`
+  query {
+    allContentfulTrack {
+      nodes {
+        contentfulId: contentful_id
+        title
+        cover {
+          resolutions {
+            src
+          }
+        }
+      }
+    }
+    allContentfulPlaylist {
+      nodes {
+        contentfulId: contentful_id
+        title
+        cover {
+          resolutions {
+            src
+          }
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
