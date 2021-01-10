@@ -6,23 +6,18 @@ import Profile from '../sections/Profile'
 
 const IndexPage = () => (
   <Main>
+    <h1 hidden>
+      Derive music
+    </h1>
     <CardList
       title="Fresh works"
       entity="tracks"
     />
     <CardList
-      title="Albums"
-      entity="playlists"
-    />
-    <CardList
       title="Playlists"
       entity="playlists"
     />
-    <Profile
-      username="derive"
-      fullName="Vlad V"
-      description="Making music for fun. Here you can find most of my music sketches. All of them can be downloaded and used somewhere."
-    />
+    <Profile />
   </Main>
 )
 
