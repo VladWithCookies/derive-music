@@ -1,14 +1,23 @@
 import * as React from 'react'
 
 import Main from '../layouts/Main'
-import Profile from '../sections/Profile'
 import CardList from '../sections/CardList'
+import Profile from '../sections/Profile'
 
 const IndexPage = () => (
   <Main>
-    <CardList title="Fresh works" />
-    <CardList title="Albums" />
-    <CardList title="Playlists" />
+    <CardList
+      title="Fresh works"
+      entity="tracks"
+    />
+    <CardList
+      title="Albums"
+      entity="playlists"
+    />
+    <CardList
+      title="Playlists"
+      entity="playlists"
+    />
     <Profile
       username="derive"
       fullName="Vlad V"

@@ -6,7 +6,7 @@ import Footer from '../sections/Footer'
 const Main = ({ children }) => (
   <div className="flex flex-col h-screen">
     <Header />
-    <main className="flex flex-col justify-center flex-grow bg-gray-100">
+    <main className="flex flex-col flex-grow bg-gray-100">
       {children}
     </main>
     <Footer />
