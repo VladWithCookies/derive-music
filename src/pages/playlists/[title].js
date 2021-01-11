@@ -6,7 +6,7 @@ import Profile from '../../sections/Profile'
 import PlaylistDetails from '../../sections/PlaylistDetails'
 
 const PlaylistDetailsPage = ({ data: { playlist } }) => (
-  <Main>
+  <Main title={playlist.title}>
     <PlaylistDetails {...playlist} />
     <Profile />
   </Main>
@@ -23,6 +23,7 @@ export const query = graphql`
         }
       }
       tracks {
+        id: contentful_id
         title
         audio: file {
           file {

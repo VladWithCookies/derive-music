@@ -23,7 +23,7 @@ const PlaylistDetails = ({ title, tracks, cover, description}) => (
       {map(tracks, ({ id, title, audio }) => (
         <Track
           as="li"
-          keys={id}
+          key={id}
           title={title}
           src={audio.file.url}
           className="mb-4"

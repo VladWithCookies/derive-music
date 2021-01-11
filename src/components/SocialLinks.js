@@ -12,6 +12,7 @@ const SocialLinks = ({ className }) => (
       target="_blank"
       className="mr-4"
       href={SOUNDCLOUD_LINK}
+      aria-label="Soundcloud profile"
     >
       <FontAwesomeIcon
         size="lg"
@@ -23,6 +24,7 @@ const SocialLinks = ({ className }) => (
       target="_blank"
       className="mr-4"
       href={INSTAGRAM_LINK}
+      aria-label="Instagram profile"
     >
       <FontAwesomeIcon
         size="lg"
@@ -34,6 +36,7 @@ const SocialLinks = ({ className }) => (
       target="_blank"
       className="mr-4"
       href={GITHUB_LINK}
+      aria-label="Github profile"
     >
       <FontAwesomeIcon
         size="lg"
@@ -44,6 +47,7 @@ const SocialLinks = ({ className }) => (
       rel="noreferrer noopener"
       target="_blank"
       href={LINKED_IN_LINK}
+      aria-label="LinkedIn profile"
     >
       <FontAwesomeIcon
         size="lg"

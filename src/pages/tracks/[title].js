@@ -6,7 +6,7 @@ import Profile from '../../sections/Profile'
 import TrackDetails from '../../sections/TrackDetails'
 
 const TrackDetailsPage = ({ data: { track } }) => (
-  <Main>
+  <Main title={track.title}>
     <TrackDetails {...track} />
     <Profile />
   </Main>

@@ -16,7 +16,7 @@ const Card = ({ title, entity, cover, description, as }) => {
           {title}
         </p>
         {description && (
-          <p className="text-sm text-gray-500	">
+          <p className="text-sm text-gray-600	">
             {description}
           </p>
         )}

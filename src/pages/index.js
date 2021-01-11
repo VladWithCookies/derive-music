@@ -6,10 +6,7 @@ import CardList from '../sections/CardList'
 import Profile from '../sections/Profile'
 
 const IndexPage = ({ data: { tracks, playlists } }) => (
-  <Main>
-    <h1 hidden>
-      Derive music
-    </h1>
+  <Main title="Home">
     <CardList
       title="Fresh works"
       entity="tracks"
