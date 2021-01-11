@@ -1,19 +1,20 @@
 import * as React from 'react'
+import { graphql } from 'gatsby'
 
 import Main from '../../layouts/Main'
 import Profile from '../../sections/Profile'
 import PlaylistDetails from '../../sections/PlaylistDetails'
 
-const PlaylistDetailsPage = ({ data: { contentfulPlaylist } }) => (
+const PlaylistDetailsPage = ({ data: { playlist } }) => (
   <Main>
-    <PlaylistDetails {...contentfulPlaylist} />
+    <PlaylistDetails {...playlist} />
     <Profile />
   </Main>
 )
 
 export const query = graphql`
   query playlistDetails($title: StringQueryOperatorInput) {
-    contentfulPlaylist(title: $title) {
+    playlist: contentfulPlaylist(title: $title) {
       title
       description
       cover {
@@ -23,7 +24,7 @@ export const query = graphql`
       }
       tracks {
         title
-        file {
+        audio: file {
           file {
             url
           }

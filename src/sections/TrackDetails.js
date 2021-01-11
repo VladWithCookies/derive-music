@@ -4,7 +4,7 @@ import Cover from '../components/Cover'
 import Track from '../components/Track'
 import Description from '../components/Description'
 
-const TrackDetails = ({ title, file, cover, description }) => (
+const TrackDetails = ({ title, audio, cover, description }) => (
   <section className="container mx-auto flex flex-grow flex-wrap px-4 py-8">
     <Cover
       src={cover.resolutions.src}
@@ -13,7 +13,7 @@ const TrackDetails = ({ title, file, cover, description }) => (
     <div>
       <Track
         title={title}
-        src={file.file.url}
+        src={audio.file.url}
       />
       {description && (
         <Description>

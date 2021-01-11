@@ -1,10 +1,11 @@
 import * as React from 'react'
+import { graphql } from 'gatsby'
 
 import Main from '../layouts/Main'
 import CardList from '../sections/CardList'
 import Profile from '../sections/Profile'
 
-const IndexPage = ({ data: { allContentfulTrack, allContentfulPlaylist } }) => (
+const IndexPage = ({ data: { tracks, playlists } }) => (
   <Main>
     <h1 hidden>
       Derive music
@@ -12,12 +13,12 @@ const IndexPage = ({ data: { allContentfulTrack, allContentfulPlaylist } }) => (
     <CardList
       title="Fresh works"
       entity="tracks"
-      items={allContentfulTrack.nodes}
+      items={tracks.nodes}
     />
     <CardList
       title="Playlists"
       entity="playlists"
-      items={allContentfulPlaylist.nodes}
+      items={playlists.nodes}
     />
     <Profile />
   </Main>
@@ -25,9 +26,9 @@ const IndexPage = ({ data: { allContentfulTrack, allContentfulPlaylist } }) => (
 
 export const query = graphql`
   query home {
-    allContentfulTrack(filter: { isFresh: { eq: true } }) {
+    tracks: allContentfulTrack(filter: { isFresh: { eq: true } }) {
       nodes {
-        contentfulId: contentful_id
+        id: contentful_id
         title
         description
         cover {
@@ -37,9 +38,9 @@ export const query = graphql`
         }
       }
     }
-    allContentfulPlaylist {
+    playlists: allContentfulPlaylist {
       nodes {
-        contentfulId: contentful_id
+        id: contentful_id
         title
         description
         cover {

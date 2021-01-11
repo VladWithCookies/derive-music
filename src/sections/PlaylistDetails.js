@@ -20,12 +20,13 @@ const PlaylistDetails = ({ title, tracks, cover, description}) => (
       )}
     </div>
     <ol className="list-decimal ml-4 w-96">
-      {map(tracks, ({ title, file }) => (
+      {map(tracks, ({ id, title, audio }) => (
         <Track
           as="li"
-          className="mb-4"
+          keys={id}
           title={title}
-          src={file.file.url}
+          src={audio.file.url}
+          className="mb-4"
         />
       ))}
     </ol>

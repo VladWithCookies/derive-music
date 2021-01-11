@@ -5,19 +5,19 @@ import Main from '../../layouts/Main'
 import Profile from '../../sections/Profile'
 import TrackDetails from '../../sections/TrackDetails'
 
-const TrackDetailsPage = ({ data: { contentfulTrack } }) => (
+const TrackDetailsPage = ({ data: { track } }) => (
   <Main>
-    <TrackDetails {...contentfulTrack} />
+    <TrackDetails {...track} />
     <Profile />
   </Main>
 )
 
 export const query = graphql`
   query trackDetails($title: StringQueryOperatorInput) {
-    contentfulTrack(title: $title) {
+    track: contentfulTrack(title: $title) {
       title
       description
-      file {
+      audio: file {
         file {
           url
         }

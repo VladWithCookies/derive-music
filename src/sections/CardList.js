@@ -15,8 +15,8 @@ const CardList = ({ title, entity, items }) => (
     <ul className="flex flex-wrap">
       {map(items, item => (
         <Card
-          key={item.contentfulId}
           as="li"
+          key={item.id}
           entity={entity}
           {...item}
         />

@@ -1,7 +1,9 @@
 import clsx from 'clsx';
 import * as React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInstagram, faSoundcloud } from '@fortawesome/free-brands-svg-icons'
+import { faInstagram, faSoundcloud, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+
+import { GITHUB_LINK, LINKED_IN_LINK, INSTAGRAM_LINK, SOUNDCLOUD_LINK } from '../constants/socialLinks'
 
 const SocialLinks = ({ className }) => (
   <div className={clsx('flex justify-end', className)}>
@@ -9,7 +11,7 @@ const SocialLinks = ({ className }) => (
       rel="noreferrer noopener"
       target="_blank"
       className="mr-4"
-      href="https://soundcloud.com/artplusvision"
+      href={SOUNDCLOUD_LINK}
     >
       <FontAwesomeIcon
         size="lg"
@@ -19,11 +21,33 @@ const SocialLinks = ({ className }) => (
     <a
       rel="noreferrer noopener"
       target="_blank"
-      href="https://www.instagram.com/de.rive"
+      className="mr-4"
+      href={INSTAGRAM_LINK}
     >
       <FontAwesomeIcon
         size="lg"
         icon={faInstagram}
+      />
+    </a>
+    <a
+      rel="noreferrer noopener"
+      target="_blank"
+      className="mr-4"
+      href={GITHUB_LINK}
+    >
+      <FontAwesomeIcon
+        size="lg"
+        icon={faGithub}
+      />
+    </a>
+    <a
+      rel="noreferrer noopener"
+      target="_blank"
+      href={LINKED_IN_LINK}
+    >
+      <FontAwesomeIcon
+        size="lg"
+        icon={faLinkedin}
       />
     </a>
   </div>
