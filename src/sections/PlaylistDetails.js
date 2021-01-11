@@ -8,7 +8,7 @@ import Description from '../components/Description'
 
 const PlaylistDetails = ({ title, tracks, cover, description}) => (
   <section className="container mx-auto flex flex-grow flex-wrap px-4 py-8">
-    <div className="mb-8 mr-4">
+    <div className="mb-8 mr-8">
       <Cover src={cover.resolutions.src} />
       <Title as="h1">
         {title}

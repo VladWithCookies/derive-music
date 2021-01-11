@@ -13,8 +13,8 @@ const TrackDetailsPage = ({ data: { track } }) => (
 )
 
 export const query = graphql`
-  query trackDetails($title: StringQueryOperatorInput) {
-    track: contentfulTrack(title: $title) {
+  query trackDetails($id: String) {
+    track: contentfulTrack(id: { eq: $id }) {
       title
       description
       audio: file {

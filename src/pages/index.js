@@ -27,6 +27,7 @@ export const query = graphql`
       nodes {
         id: contentful_id
         title
+        slug
         description
         cover {
           resolutions {
@@ -39,6 +40,7 @@ export const query = graphql`
       nodes {
         id: contentful_id
         title
+        slug
         description
         cover {
           resolutions {

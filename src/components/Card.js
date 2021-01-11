@@ -1,12 +1,12 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 
-const Card = ({ title, entity, cover, description, as }) => {
+const Card = ({ title, slug, entity, cover, description, as }) => {
   const Component = as || 'div'
 
   return (
     <Component className="w-80 p-4">
-      <Link to={`/${entity}/${title}`}>
+      <Link to={`/${entity}/${slug}`}>
         <img
           className="object-cover w-80 h-80"
           src={cover.resolutions.src}

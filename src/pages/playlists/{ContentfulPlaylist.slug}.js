@@ -13,8 +13,8 @@ const PlaylistDetailsPage = ({ data: { playlist } }) => (
 )
 
 export const query = graphql`
-  query playlistDetails($title: StringQueryOperatorInput) {
-    playlist: contentfulPlaylist(title: $title) {
+  query playlistDetails($id: String) {
+    playlist: contentfulPlaylist(id: { eq: $id }) {
       title
       description
       cover {

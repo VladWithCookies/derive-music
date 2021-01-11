@@ -8,7 +8,7 @@ const TrackDetails = ({ title, audio, cover, description }) => (
   <section className="container mx-auto flex flex-grow flex-wrap px-4 py-8">
     <Cover
       src={cover.resolutions.src}
-      className="mr-4"
+      className="mr-8 mb-8"
     />
     <div>
       <Track
