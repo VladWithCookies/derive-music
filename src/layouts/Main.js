@@ -9,6 +9,8 @@ const Main = ({ title, children }) => (
     <Helmet>
       <html lang="en" />
       <title>{title} | Derive music</title>
+      <meta name="author" content="Vlad V" />
+      <meta name="description" content="Derive music blog" />
     </Helmet>
     <Header />
     <main className="flex flex-col flex-grow bg-gray-100">

@@ -1,6 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: 'Derive music',
+    description: 'Derive music blog',
+    author: 'Vlad V',
+    siteUrl: 'https://replace-me-with-the-production-url.com',
   },
   plugins: [
     {
@@ -17,6 +20,12 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
+        name: 'Derive music',
+        short_name: 'Derive music',
+        start_url: '/',
+        background_color: '#ffffff',
+        theme_color: '#000000',
+        display: 'standalone',
         icon: 'src/images/icon.png',
       },
     },
@@ -31,5 +40,6 @@ module.exports = {
     },
     'gatsby-plugin-postcss',
     'gatsby-plugin-fontawesome-css',
+    'gatsby-plugin-offline',
   ],
 }
