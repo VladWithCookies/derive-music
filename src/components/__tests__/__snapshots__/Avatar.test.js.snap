@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar matches snapshot 1`] = `
+<div>
+  <img
+    alt="Guy with a cup of coffee"
+    class="object-cover w-40 h-40"
+    src="image"
+  />
+</div>
+`;
