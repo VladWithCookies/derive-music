@@ -16,7 +16,6 @@ export const query = graphql`
   query trackDetails($id: String) {
     track: contentfulTrack(id: { eq: $id }) {
       title
-      description
       audio: file {
         file {
           url

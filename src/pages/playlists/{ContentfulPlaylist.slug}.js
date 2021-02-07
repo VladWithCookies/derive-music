@@ -16,7 +16,6 @@ export const query = graphql`
   query playlistDetails($id: String) {
     playlist: contentfulPlaylist(id: { eq: $id }) {
       title
-      description
       cover {
         resolutions {
           src

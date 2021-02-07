@@ -28,7 +28,6 @@ export const query = graphql`
         id: contentful_id
         title
         slug
-        description
         cover {
           resolutions {
             src
@@ -41,7 +40,6 @@ export const query = graphql`
         id: contentful_id
         title
         slug
-        description
         cover {
           resolutions {
             src
