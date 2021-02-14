@@ -1,8 +1,10 @@
-import * as React from 'react'
-import { Link } from 'gatsby'
+import * as React from 'react';
+import { Link } from 'gatsby';
 
-const Card = ({ title, slug, entity, cover, description, as }) => {
-  const Component = as || 'div'
+const Card = ({
+  title, slug, entity, cover, description, as,
+}) => {
+  const Component = as || 'div';
 
   return (
     <Component className="w-80 p-4">
@@ -22,7 +24,7 @@ const Card = ({ title, slug, entity, cover, description, as }) => {
         )}
       </Link>
     </Component>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;

@@ -1,8 +1,8 @@
-import * as React from 'react'
-import { map } from 'lodash'
+import * as React from 'react';
+import { map } from 'lodash';
 
-import Title from '../components/Title'
-import Card from '../components/Card'
+import Title from '../components/Title';
+import Card from '../components/Card';
 
 const CardList = ({ title, entity, items }) => (
   <section className="container mx-auto py-8">
@@ -13,16 +13,19 @@ const CardList = ({ title, entity, items }) => (
       {title}
     </Title>
     <ul className="flex flex-wrap">
-      {map(items, item => (
+      {map(items, (item) => (
         <Card
           as="li"
           key={item.id}
           entity={entity}
-          {...item}
+          slug={item.slug}
+          title={item.title}
+          cover={item.cover}
+          description={item.description}
         />
       ))}
     </ul>
   </section>
-)
+);
 
-export default CardList
+export default CardList;

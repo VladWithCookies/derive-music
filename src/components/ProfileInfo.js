@@ -1,6 +1,8 @@
-import * as React from 'react'
+import * as React from 'react';
 
-const ProfileInfo = ({ username, fullName, location, description, className }) => (
+const ProfileInfo = ({
+  username, fullName, location, description, className,
+}) => (
   <div className={className}>
     <h2 className="text-2xl">
       {username}
@@ -9,12 +11,14 @@ const ProfileInfo = ({ username, fullName, location, description, className }) =
       {fullName}
     </p>
     <p>
-      Based in {location}
+      Based in
+      {' '}
+      {location}
     </p>
     <p className="text-gray-600">
       {description}
     </p>
   </div>
-)
+);
 
-export default ProfileInfo
+export default ProfileInfo;

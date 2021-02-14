@@ -1,8 +1,8 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import Avatar from '../components/Avatar'
-import ProfileInfo from '../components/ProfileInfo'
-import me from '../images/me.jpg'
+import Avatar from '../components/Avatar';
+import ProfileInfo from '../components/ProfileInfo';
+import me from '../images/me.jpg';
 
 const Profile = () => (
   <section className="container mx-auto px-4 py-8 flex">
@@ -15,6 +15,6 @@ const Profile = () => (
       description="Making music for fun. Here you can find most of my music sketches. All of them can be downloaded and used somewhere."
     />
   </section>
-)
+);
 
-export default Profile
+export default Profile;

@@ -1,6 +1,6 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import SocialLinks from '../components/SocialLinks'
+import SocialLinks from '../components/SocialLinks';
 
 const Footer = () => (
   <footer className="bg-gray-900">
@@ -10,6 +10,6 @@ const Footer = () => (
       <SocialLinks className="mt-4" />
     </div>
   </footer>
-)
+);
 
-export default Footer
+export default Footer;

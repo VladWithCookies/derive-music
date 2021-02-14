@@ -1,14 +1,18 @@
-import * as React from 'react'
-import { Helmet } from 'react-helmet'
+import * as React from 'react';
+import { Helmet } from 'react-helmet';
 
-import Header from '../sections/Header'
-import Footer from '../sections/Footer'
+import Header from '../sections/Header';
+import Footer from '../sections/Footer';
 
 const Main = ({ title, children }) => (
   <div className="flex flex-col h-screen">
     <Helmet>
       <html lang="en" />
-      <title>{title} | Derive music</title>
+      <title>
+        {title}
+        {' '}
+        | Derive music
+      </title>
       <meta name="author" content="Vlad V" />
       <meta name="description" content="Derive music blog" />
     </Helmet>
@@ -21,6 +25,6 @@ const Main = ({ title, children }) => (
     </main>
     <Footer />
   </div>
-)
+);
 
-export default Main
+export default Main;

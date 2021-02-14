@@ -1,9 +1,13 @@
 import clsx from 'clsx';
-import * as React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInstagram, faSoundcloud, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import * as React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faInstagram, faSoundcloud, faGithub, faLinkedin,
+} from '@fortawesome/free-brands-svg-icons';
 
-import { GITHUB_LINK, LINKED_IN_LINK, INSTAGRAM_LINK, SOUNDCLOUD_LINK } from '../constants/socialLinks'
+import {
+  GITHUB_LINK, LINKED_IN_LINK, INSTAGRAM_LINK, SOUNDCLOUD_LINK,
+} from '../constants/socialLinks';
 
 const SocialLinks = ({ className }) => (
   <div className={clsx('flex justify-end', className)}>
@@ -55,6 +59,6 @@ const SocialLinks = ({ className }) => (
       />
     </a>
   </div>
-)
+);
 
-export default SocialLinks
+export default SocialLinks;

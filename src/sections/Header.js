@@ -1,6 +1,6 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import Logo from '../components/Logo'
+import Logo from '../components/Logo';
 
 const Header = () => (
   <header>
@@ -8,6 +8,6 @@ const Header = () => (
       <Logo />
     </div>
   </header>
-)
+);
 
-export default Header
+export default Header;

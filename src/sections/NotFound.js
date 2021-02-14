@@ -1,7 +1,7 @@
-import * as React from 'react'
-import { Link } from 'gatsby'
+import * as React from 'react';
+import { Link } from 'gatsby';
 
-import Error from '../components/Error'
+import Error from '../components/Error';
 
 const NotFound = () => (
   <section className="container flex justify-center items-center">
@@ -17,6 +17,6 @@ const NotFound = () => (
       </Link>
     </Error>
   </section>
-)
+);
 
-export default NotFound
+export default NotFound;

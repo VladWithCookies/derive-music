@@ -1,5 +1,5 @@
-import * as React from 'react'
-import clsx from 'clsx'
+import * as React from 'react';
+import clsx from 'clsx';
 
 const Cover = ({ src, className }) => (
   <img
@@ -7,6 +7,6 @@ const Cover = ({ src, className }) => (
     src={src}
     alt=""
   />
-)
+);
 
-export default Cover
+export default Cover;

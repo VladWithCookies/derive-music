@@ -1,9 +1,9 @@
-import * as React from 'react'
-import { graphql } from 'gatsby'
+import * as React from 'react';
+import { graphql } from 'gatsby';
 
-import Main from '../layouts/Main'
-import CardList from '../sections/CardList'
-import Profile from '../sections/Profile'
+import Main from '../layouts/Main';
+import CardList from '../sections/CardList';
+import Profile from '../sections/Profile';
 
 const IndexPage = ({ data: { tracks, playlists } }) => (
   <Main title="Home">
@@ -19,7 +19,7 @@ const IndexPage = ({ data: { tracks, playlists } }) => (
     />
     <Profile />
   </Main>
-)
+);
 
 export const query = graphql`
   query home {
@@ -48,6 +48,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default IndexPage
+export default IndexPage;

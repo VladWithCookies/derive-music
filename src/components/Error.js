@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from 'react';
 
 const Error = ({ title, description, children }) => (
   <div className="flex flex-col items-center">
@@ -12,6 +12,6 @@ const Error = ({ title, description, children }) => (
     )}
     {children}
   </div>
-)
+);
 
-export default Error
+export default Error;
